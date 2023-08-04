@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import colors from '../../styles/colors';
-import fonts from '../../styles/fonts';
+import { StyleSheet } from 'react-native'
+import colors from '../../styles/colors'
+import fonts from '../../styles/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 32,
     justifyContent: 'center',
-  }
-});
+  },
+})
 
-export default styles;
+export default styles

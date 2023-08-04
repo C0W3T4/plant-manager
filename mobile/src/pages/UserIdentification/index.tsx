@@ -1,6 +1,6 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useNavigation } from '@react-navigation/core';
-import { useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { useNavigation } from '@react-navigation/core'
+import { useState } from 'react'
 import {
   Alert,
   Keyboard,
@@ -10,52 +10,52 @@ import {
   Text,
   TextInput,
   TouchableWithoutFeedback,
-  View
-} from 'react-native';
-import Emoji from 'react-native-emoji';
-import { Button } from '../../components/Button';
-import colors from '../../styles/colors';
-import { StackNavigation } from '../../types/navigation';
-import styles from './styles';
+  View,
+} from 'react-native'
+import Emoji from 'react-native-emoji'
+import { Button } from '../../components/Button'
+import colors from '../../styles/colors'
+import { StackNavigation } from '../../types/navigation'
+import styles from './styles'
 
 export function UserIdentification() {
-  const [isFocused, setIsFocused] = useState<boolean>(false);
-  const [isFilled, setIsFilled] = useState<boolean>(false);
-  const [name, setName] = useState<string>();
+  const [isFocused, setIsFocused] = useState<boolean>(false)
+  const [isFilled, setIsFilled] = useState<boolean>(false)
+  const [name, setName] = useState<string>()
 
-  const { navigate } = useNavigation<StackNavigation>();
+  const { navigate } = useNavigation<StackNavigation>()
 
   async function handleSubmit(): Promise<void> {
     if (!name) {
-      return Alert.alert("Why don't you tell me your name? 😢");
+      return Alert.alert("Why don't you tell me your name? 😢")
     }
 
     try {
-      await AsyncStorage.setItem('@plantmanager:user', name);
+      await AsyncStorage.setItem('@plantmanager:user', name)
       navigate('Confirmation', {
         title: 'All set!',
         subtitle: `Now let's start taking care of your little plants with a lot of love`,
         buttonTitle: 'Get started',
         icon: 'smile',
         nextScreen: 'PlantSelect',
-      });
+      })
     } catch {
-      Alert.alert('Could not save your name! 😢');
+      Alert.alert('Could not save your name! 😢')
     }
   }
 
   function handleInputBlur(): void {
-    setIsFocused(false);
-    setIsFilled(!!name);
+    setIsFocused(false)
+    setIsFilled(!!name)
   }
 
   function handleInputFocus(): void {
-    setIsFocused(true);
+    setIsFocused(true)
   }
 
   function handleInputChange(value: string): void {
-    setIsFilled(!!value);
-    setName(value);
+    setIsFilled(!!value)
+    setName(value)
   }
 
   return (
@@ -82,7 +82,7 @@ export function UserIdentification() {
               <TextInput
                 style={[
                   styles.input,
-                  (isFocused || isFilled) && { borderColor: colors.green }
+                  (isFocused || isFilled) && { borderColor: colors.green },
                 ]}
                 placeholder="Type your name"
                 onBlur={handleInputBlur}
@@ -97,5 +97,5 @@ export function UserIdentification() {
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     </SafeAreaView>
-  );
+  )
 }

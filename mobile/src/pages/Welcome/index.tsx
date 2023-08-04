@@ -1,15 +1,15 @@
-import { Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/core';
-import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
-import wateringImg from '../../assets/watering.png';
-import { StackNavigation } from '../../types/navigation';
-import styles from './styles';
+import { Feather } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/core'
+import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
+import wateringImg from '../../assets/watering.png'
+import { StackNavigation } from '../../types/navigation'
+import styles from './styles'
 
 export function Welcome() {
-  const { navigate } = useNavigation<StackNavigation>();
+  const { navigate } = useNavigation<StackNavigation>()
 
   function handleStart(): void {
-    navigate('UserIdentification');
+    navigate('UserIdentification')
   }
 
   return (
@@ -24,12 +24,13 @@ export function Welcome() {
         </Text>
         <Image
           source={wateringImg}
+          alt="Watering"
           style={styles.image}
-          resizeMode='contain'
+          resizeMode="contain"
         />
         <Text style={styles.subtitle}>
-          Don't forget to water your plants anymore.
-          We take care to remind you whenever you need it.
+          Don&#39;t forget to water your plants anymore. We take care to remind
+          you whenever you need it.
         </Text>
         <TouchableOpacity
           style={styles.button}
@@ -40,5 +41,5 @@ export function Welcome() {
         </TouchableOpacity>
       </View>
     </SafeAreaView>
-  );
+  )
 }

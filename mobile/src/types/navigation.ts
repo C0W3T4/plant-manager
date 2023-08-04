@@ -1,19 +1,19 @@
-import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { StackNavigationProp } from '@react-navigation/stack';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
+import { StackNavigationProp } from '@react-navigation/stack'
 
-export type StackParamList = {
-  Welcome: any;
-  UserIdentification: any;
-  Confirmation: any;
-  PlantSelect: any;
-  PlantSave: any;
-}
+export type StackScreens =
+  | 'Welcome'
+  | 'UserIdentification'
+  | 'Confirmation'
+  | 'PlantSelect'
+  | 'PlantSave'
 
-export type BottomTabParamList = {
-  NewPlant: any;
-  MyPlants: any;
-}
+export type BottomTabScreens = 'NewPlant' | 'MyPlants'
 
-export type StackNavigation = StackNavigationProp<StackParamList>;
+export type StackParamList = Record<StackScreens, object | undefined>
 
-export type BottomTabNavigation = BottomTabNavigationProp<BottomTabParamList>;
+export type BottomTabParamList = Record<BottomTabScreens, object | undefined>
+
+export type StackNavigation = StackNavigationProp<StackParamList>
+
+export type BottomTabNavigation = BottomTabNavigationProp<BottomTabParamList>

@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import colors from "../../styles/colors";
-import fonts from "../../styles/fonts";
+import { StyleSheet } from 'react-native'
+import colors from '../../styles/colors'
+import fonts from '../../styles/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 30,
-    backgroundColor: colors.background
+    backgroundColor: colors.background,
   },
   spotlight: {
     backgroundColor: colors.blue_light,
@@ -17,11 +17,11 @@ const styles = StyleSheet.create({
     height: 110,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   spotlightImage: {
     width: 60,
-    height: 60
+    height: 60,
   },
   spotlightText: {
     flex: 1,
@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
   },
   plants: {
     flex: 1,
-    width: '100%'
+    width: '100%',
   },
   plantsTitle: {
     fontSize: 24,
     fontFamily: fonts.heading,
     color: colors.heading,
-    marginVertical: 20
-  }
-});
+    marginVertical: 20,
+  },
+})
 
-export default styles;
+export default styles

@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native';
-import { getStatusBarHeight } from 'react-native-platform-helper';
-import colors from '../../styles/colors';
-import fonts from '../../styles/fonts';
+import { StyleSheet } from 'react-native'
+import { getStatusBarHeight } from 'react-native-platform-helper'
+import colors from '../../styles/colors'
+import fonts from '../../styles/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     height: 48,
     borderRadius: 40,
   },
-});
+})
 
-export default styles;
+export default styles

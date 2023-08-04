@@ -1,7 +1,7 @@
-import LottieView from 'lottie-react-native';
-import { View } from 'react-native';
-import loadAnimation from '../../assets/load.json';
-import styles from './styles';
+import LottieView from 'lottie-react-native'
+import { View } from 'react-native'
+import loadAnimation from '../../assets/load.json'
+import styles from './styles'
 
 export function Load() {
   return (
@@ -13,5 +13,5 @@ export function Load() {
         style={styles.animation}
       />
     </View>
-  );
+  )
 }

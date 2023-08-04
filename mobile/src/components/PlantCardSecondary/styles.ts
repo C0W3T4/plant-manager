@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import colors from '../../styles/colors';
-import fonts from '../../styles/fonts';
+import { StyleSheet } from 'react-native'
+import colors from '../../styles/colors'
+import fonts from '../../styles/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontFamily: fonts.heading,
     fontSize: 17,
-    color: colors.heading
+    color: colors.heading,
   },
   details: {
     alignItems: 'flex-end',
@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     right: 20,
-    paddingLeft: 15
-  }
-});
+    paddingLeft: 15,
+  },
+})
 
-export default styles;
+export default styles

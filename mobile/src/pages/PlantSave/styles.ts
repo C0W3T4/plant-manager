@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native';
-import { getBottomSpace } from 'react-native-platform-helper';
-import colors from '../../styles/colors';
-import fonts from '../../styles/fonts';
+import { StyleSheet } from 'react-native'
+import { getBottomSpace } from 'react-native-platform-helper'
+import colors from '../../styles/colors'
+import fonts from '../../styles/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   scrollListContainer: {
     flexGrow: 1,
     justifyContent: 'space-between',
-    backgroundColor: colors.shape
+    backgroundColor: colors.shape,
   },
   plantInfo: {
     flex: 1,
@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
     paddingVertical: 50,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.shape
+    backgroundColor: colors.shape,
   },
   controller: {
     backgroundColor: colors.white,
     paddingHorizontal: 20,
     paddingTop: 20,
-    paddingBottom: getBottomSpace() || 20
+    paddingBottom: getBottomSpace() || 20,
   },
   plantName: {
     fontFamily: fonts.heading,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.text,
     color: colors.heading,
     fontSize: 17,
-    marginTop: 10
+    marginTop: 10,
   },
   tipContainer: {
     flexDirection: 'row',
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 20,
     position: 'relative',
-    bottom: 60
+    bottom: 60,
   },
   tipImage: {
     width: 56,
@@ -64,14 +64,14 @@ const styles = StyleSheet.create({
     fontFamily: fonts.text,
     color: colors.blue,
     fontSize: 17,
-    textAlign: 'justify'
+    textAlign: 'justify',
   },
   alertLabel: {
     textAlign: 'center',
     fontFamily: fonts.complement,
     color: colors.heading,
     fontSize: 12,
-    marginBottom: 5
+    marginBottom: 5,
   },
   dateTimePickerButton: {
     width: '100%',
@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
   dateTimePickerText: {
     color: colors.heading,
     fontSize: 24,
-    fontFamily: fonts.text
-  }
-});
+    fontFamily: fonts.text,
+  },
+})
 
-export default styles;
+export default styles

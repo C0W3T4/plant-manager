@@ -1,6 +1,6 @@
-import { Dimensions, StyleSheet } from 'react-native';
-import colors from '../../styles/colors';
-import fonts from '../../styles/fonts';
+import { Dimensions, StyleSheet } from 'react-native'
+import colors from '../../styles/colors'
+import fonts from '../../styles/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   title: {
     fontSize: 28,
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     color: colors.heading,
     marginTop: 38,
     fontFamily: fonts.heading,
-    lineHeight: 34
+    lineHeight: 34,
   },
   image: {
     height: Dimensions.get('window').width * 0.7,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   buttonIcon: {
     fontSize: 32,
     color: colors.white,
-  }
-});
+  },
+})
 
-export default styles;
+export default styles

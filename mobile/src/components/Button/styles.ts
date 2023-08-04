@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import colors from '../../styles/colors';
-import fonts from '../../styles/fonts';
+import { StyleSheet } from 'react-native'
+import colors from '../../styles/colors'
+import fonts from '../../styles/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontFamily: fonts.heading,
   },
-});
+})
 
-export default styles;
+export default styles
