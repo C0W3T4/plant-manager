@@ -25,9 +25,10 @@ export function UserIdentification() {
 
   const { navigate } = useNavigation<StackNavigation>();
 
-  async function handleSubmit() {
-    if (!name)
+  async function handleSubmit(): Promise<void> {
+    if (!name) {
       return Alert.alert("Why don't you tell me your name? 😢");
+    }
 
     try {
       await AsyncStorage.setItem('@plantmanager:user', name);
@@ -52,7 +53,7 @@ export function UserIdentification() {
     setIsFocused(true);
   }
 
-  function handleInputChange(value: string) {
+  function handleInputChange(value: string): void {
     setIsFilled(!!value);
     setName(value);
   }

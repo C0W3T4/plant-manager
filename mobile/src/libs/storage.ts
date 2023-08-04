@@ -50,8 +50,8 @@ export async function savePlant(plant: PlantProps): Promise<void> {
         ...newPlant,
         ...oldPants
       }));
-  } catch (error: any) {
-    throw new Error(error);
+  } catch (error) {
+    throw error;
   }
 }
 
@@ -77,8 +77,8 @@ export async function loadPlant(): Promise<PlantProps[]> {
 
     return plantsSorted;
 
-  } catch (error: any) {
-    throw new Error(error);
+  } catch (error) {
+    throw error;
   }
 }
 
